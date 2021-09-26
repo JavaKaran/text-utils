@@ -43,7 +43,7 @@ export default function TextForm(props) {
 
     return (
         <>
-            <div classname="container " style={{paddingTop: '65px'}}>
+            <div className="container " style={{paddingTop: '65px'}}>
                 <h5 className={`mb-4 text-${props.mode === 'light' ? 'muted' : 'light'} text-center`}>Enter Text Below</h5>
                 <div className="mb-3 ">
                     <textarea className="form-control" onChange={handleOnChange} style={{ backgroundColor: props.mode === 'light' ? 'white' : '#95A5A6', borderColor: props.mode === 'light' ? '#107896' : '#CCD1D1', borderWidth: '2px' }} value={text} id="myBox" rows="8"></textarea>
@@ -53,7 +53,7 @@ export default function TextForm(props) {
                 <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'light' : 'dark'} mx-1 my-1`} onClick={handleLoClick} style={buttonStyle}>Convert to Lowercase</button>
                 <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'light' : 'dark'} mx-1 my-1`} onClick={handleCopy} style={buttonStyle}>Copy Text</button>
                 <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'light' : 'dark'} mx-1 my-1`} onClick={handleExtraSpaces} style={buttonStyle}>Remove Extra Spaces</button>
-                <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'alert' : 'dark'} my-1`} onClick={handleClearClick} style={{color: props.mode === 'light' ? '#FF0000' : '#FF414D', marginLeft: '325px'}}><strong>Clear Area</strong></button>
+                <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'alert' : 'dark'} mx-1 my-1`} onClick={handleClearClick} style={{color: props.mode === 'light' ? '#FF0000' : '#FF414D'}}><strong>Clear Area</strong></button>
                 </div>           
             </div>
             <div className="container my-3 text-center">
@@ -61,7 +61,7 @@ export default function TextForm(props) {
                 <p style={paraStyle}>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words and {text.length} characters</p>
                 <p style={paraStyle}>{0.008 * text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} Minutes read</p>
                 <h3 className={`text-${props.mode === 'light' ? 'muted' : 'light'}`}>Preview</h3>
-                <div className="container" style={{height: '220px', overflowX: 'scroll', overflowX:'hidden'}}>
+                <div className="container" style={{height: '220px', overflowX: 'hidden'}}>
                 <p style={paraStyle}>{text.length > 0 ? text : "Nothing to preview!"}</p>
                 </div>
             </div>
