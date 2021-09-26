@@ -61,7 +61,7 @@ export default function TextForm(props) {
                 <p style={paraStyle}>{text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} words and {text.length} characters</p>
                 <p style={paraStyle}>{0.008 * text.split(/\s+/).filter((element) => { return element.length !== 0 }).length} Minutes read</p>
                 <h3 className={`text-${props.mode === 'light' ? 'muted' : 'light'}`}>Preview</h3>
-                <div className="container" style={{height: '220px', overflowX: 'hidden'}}>
+                <div className="container" style={{height: '220px', overflow: 'auto'}}>
                 <p style={paraStyle}>{text.length > 0 ? text : "Nothing to preview!"}</p>
                 </div>
             </div>
