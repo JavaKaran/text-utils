@@ -51,9 +51,9 @@ export default function TextForm(props) {
                 <div className="container">
                 <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'light' : 'dark'} mx-1 my-1`} onClick={handleUpClick} style={buttonStyle}>Convert to Uppercase</button>
                 <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'light' : 'dark'} mx-1 my-1`} onClick={handleLoClick} style={buttonStyle}>Convert to Lowercase</button>
-                <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'light' : 'dark'} mx-1 my-1`} onClick={handleClearClick} style={buttonStyle}>Clear Text</button>
                 <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'light' : 'dark'} mx-1 my-1`} onClick={handleCopy} style={buttonStyle}>Copy Text</button>
                 <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'light' : 'dark'} mx-1 my-1`} onClick={handleExtraSpaces} style={buttonStyle}>Remove Extra Spaces</button>
+                <button disabled={text.length === 0} className={`btn btn-${props.mode === 'light' ? 'alert' : 'dark'} my-1`} onClick={handleClearClick} style={{color: props.mode === 'light' ? '#FF0000' : '#FF414D', marginLeft: '325px'}}><strong>Clear Area</strong></button>
                 </div>           
             </div>
             <div className="container my-3 text-center">

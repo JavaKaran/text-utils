@@ -36,3 +36,15 @@
     transform: rotate(360deg);
   }
 } */
+
+.btn-light {
+  background-color: #c2f1f1 !important ;
+}
+
+.btn-alert {
+  border-color: #FF0000 !important;
+}
+
+.btn-alert:hover{
+  background-color: #f0d9d9 !important;
+}
